@@ -194,9 +194,10 @@ body {
 .home-img img {
     width: 80%;
     max-width: 300px;
-    border-radius: 50%;
+    border-radius: 80%;
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
     animation: float 3s ease-in-out infinite;
+    margin-top: 12%;
 }
 
 @keyframes float {
