@@ -1,131 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ramaraju D V | Azure DevOps Engineer !!!</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ramaraju D V</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-  <header class="topnav">
-    <div class="nav-logo">Ramaraju D V</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="snap-container">
-    <section id="home" class="snap-section hero-section">
-      <div class="hero-content">
-        <img src="assets/images/Photo-ramaraju.png" alt="Photo of Ramaraju D V" class="hero-photo">
-        <h1>Hi, I'm <span class="highlight">Ramaraju D V</span></h1>
-        <h2 class="typewriter">Azure DevOps Engineer</h2>
-        <div class="social-links">
-          <a href="https://github.com/Ramaraju-devops" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/linkedIn-Rama" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-    <section id="about" class="snap-section about-section">
-      <h2>About Me</h2>
-      <p>Azure DevOps Engineer passionate about automation, CI/CD, and cloud solutions. Experienced in building and maintaining robust DevOps pipelines and infrastructure.</p>
-      <ul class="about-info">
-        <li><strong>Email:</strong> rraj95155@gmail.com</li>
-        <li><strong>Location:</strong> [Your Location]</li>
-      </ul>
-    </section>
-    <section id="skills" class="snap-section skills-section">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div class="skill">
-          <span>Azure DevOps</span>
-          <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
-        </div>
-        <div class="skill">
-          <span>CI/CD</span>
-          <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
-        </div>
-        <div class="skill">
-          <span>Cloud Solutions</span>
-          <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
-        </div>
-        <div class="skill">
-          <span>Automation</span>
-          <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
-        </div>
-        <!-- Add more skills as needed -->
-      </div>
-    </section>
-    <section id="education" class="snap-section education-section">
-      <h2>Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>[Your Degree]</h3>
-            <p>[Your College/University]</p>
-            <span class="timeline-date">[Year]</span>
-          </div>
-        </div>
-        <!-- Add more education items as needed -->
-      </div>
-    </section>
-    <section id="experience" class="snap-section experience-section">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Azure DevOps Engineer</h3>
-            <p>[Company Name]</p>
-            <span class="timeline-date">[Year - Present]</span>
-            <ul>
-              <li>Implemented CI/CD pipelines for multiple projects</li>
-              <li>Automated infrastructure provisioning</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
             </ul>
-          </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-        <!-- Add more experience items as needed -->
-      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <div class="home-text">
+                <h3>Hi There,</h3>
+                <h1>I'm <span class="name">Ramaraju D V</span></h1>
+                <h3>I am into <span class="typing-text"></span></h3>
+                <p>Welcome to my portfolio! I'm a passionate developer creating amazing digital experiences.</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="#about" class="btn">About Me</a>
+            </div>
+            <div class="home-img">
+                <img src="./images/profile.jpg" alt="Ramaraju D V - Profile Picture">
+            </div>
+        </div>
     </section>
-    <section id="projects" class="snap-section projects-section">
-      <h2>Projects</h2>
-      <div id="projects-list" class="projects-list">
-        <!-- Projects will be loaded here by JS -->
-      </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="./images/profile.jpg" alt="Ramaraju D V - About Picture">
+                </div>
+                <div class="about-text">
+                    <h3>I'm Ramaraju D V</h3>
+                    <p>I'm Ramaraju, a Cloud Engineer specializing in Azure DevOps & AI Services based in Hyderabad.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>rraj95155@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hyderabad, India</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+XX XXX-XXX-XXXX</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn" target="_blank">Download Resume</a>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="contact" class="snap-section contact-section">
-      <h2>Contact</h2>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <p>Email: <a href="mailto:rraj95155@gmail.com">rraj95155@gmail.com</a></p>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Abilities</h2>
+            <div class="skills-content">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h4>Azure DevOps & Jenkins</h4>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h4>Automation (Terraform, Azure PowerShell, Azure CLI, Bash, ARM Templates)</h4>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h4>Azure AI Services</h4>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h4>Azure Cloud - IaaS, PaaS, SaaS, Docker & Kubernetes</h4>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h4>Groovy, yaml, bash & so on...</h4>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <h4>Generative AI, Python</h4>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer>
-    <div class="footer-links">
-      <a href="#home">Home</a> |
-      <a href="#about">About</a> |
-      <a href="#skills">Skills</a> |
-      <a href="#education">Education</a> |
-      <a href="#experience">Experience</a> |
-      <a href="#projects">Projects</a> |
-      <a href="#contact">Contact</a>
-    </div>
-    <p>&copy; 2024 Ramaraju D V. All rights reserved.</p>
-  </footer>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/app.js"></script>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">My Education</h2>
+            <p class="section-subtitle">Education is not the learning of facts, but the training of the mind to think.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Master of Technology in Computer Science</h3>
+                        <h4>Bangalore University</h4>
+                        <span class="timeline-date">2007 - 2010 | Completed</span>
+                        <p>Graduated with honors, specializing in software development and data structures.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor or Science</h3>
+                        <h4>Gulbarga University</h4>
+                        <span class="timeline-date">2003 - 2007 | Completed</span>
+                        <p>Focused on Mathematics, Physics, and Computer Science.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects Made</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://via.placeholder.com/300x200/4A90E2/ffffff?text=Project+1" alt="Project 1">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Azure DevOps Pipelines</h3>
+                        <p>A full-stack insurance project built with Java and Spring Boot</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://via.placeholder.com/300x200/4A90E2/ffffff?text=Project+2" alt="Project 2">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Azure DevOps Engineer</h3>
+                        <p>A responsive Infrastructure deployment using Terraform</p>
+                        <div class="project-tech">
+                            <span>Terraform</span>
+                            <span>Azure CLI</span>
+                            <span>Azure PowerShell</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://via.placeholder.com/300x200/4A90E2/ffffff?text=Project+3" alt="Project 3">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Azure Cloud Engineer</h3>
+                        <p>Configuration and Management of Azure Cloud Resources like, WebApps, Virtual Machines, Storage Accounts, KeyVaults, etc.</p>
+                        <div class="project-tech">
+                            <span>Azure CLI</span>
+                            <span>Azure PowerShell</span>
+                            <span>Azure Portal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Azure DevOps Engineer</h3>
+                        <h4>Hyderabad, India</h4>
+                        <span class="timeline-date">Jan 2022 - Present</span>
+                        <p>Developing and maintaining web applications using modern technologies. Working with cross-functional teams to deliver high-quality software solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Cloud Engineer | EY </h3>
+                        <h4>Hyderabad, India</h4>
+                        <span class="timeline-date">Jun 2023 - Dec 2023</span>
+                        <p>Worked on responsive web applications and improved user experience across multiple projects.</p>
+                    </div>
+                </div>
+                <!-- <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Web Developer | Freelance</h3>
+                        <h4>Self Employed</h4>
+                        <span class="timeline-date">Jan 2023 - May 2023</span>
+                        <p>Created custom websites for small businesses and startups.</p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn">View All Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>Thank you for visiting my portfolio website. Connect with me over socials or send me an email. Let's create something amazing together! 🚀</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <span>ramaraju.dv@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <span>+XX XXX-XXX-XXXX</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Hyderabad, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ramaraju's Portfolio</h3>
+                    <p>Thank you for visiting my portfolio. Keep rising! 🚀</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>rraj95155@gmail.com</li>
+                        <li>+91 ##########</li>
+                        <li>Hyderabad, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ramaraju D V. All rights reserved. | Designed with ❤️ by <a href="#">Ramaraju D V</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>
