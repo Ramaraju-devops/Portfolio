@@ -8,22 +8,25 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Ramaraju D V</div>
-      <ul class="nav-links">
+  <aside class="sidebar">
+    <div class="sidebar-logo">Ramaraju D V</div>
+    <nav class="sidebar-nav">
+      <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
-  <main>
+  </aside>
+  <main class="main-content">
     <section id="home" class="hero-section">
       <div class="hero-content">
-        <h1>Hi, I'm Ramaraju D V</h1>
-        <h2>Azure DevOps Engineer</h2>
+        <h1>Hi, I'm <span class="highlight">Ramaraju D V</span></h1>
+        <h2 class="typewriter">Azure DevOps Engineer</h2>
         <p>Welcome to my portfolio website!</p>
         <div class="social-links">
           <a href="https://github.com/Ramaraju-devops" target="_blank">GitHub</a>
@@ -31,31 +34,103 @@
         </div>
       </div>
     </section>
-    <section id="profile-photo" class="profile-photo-section">
-      <h2>Profile Photo</h2>
-      <div class="profile-photo-wrapper">
-        <img src="assets/images/Photo-ramaraju.png" alt="Photo of Ramaraju D V" class="profile-photo-img">
-        <p class="profile-photo-note">You can upload or replace your profile photo here later.</p>
-      </div>
-    </section>
     <section id="about" class="about-section">
       <h2>About Me</h2>
-      <p>Azure DevOps Engineer passionate about automation, CI/CD, and cloud solutions. Experienced in building and maintaining robust DevOps pipelines and infrastructure.</p>
+      <div class="about-content">
+        <img src="assets/images/Photo-ramaraju.png" alt="Photo of Ramaraju D V" class="profile-photo-img">
+        <div>
+          <p>Azure DevOps Engineer passionate about automation, CI/CD, and cloud solutions. Experienced in building and maintaining robust DevOps pipelines and infrastructure.</p>
+          <ul class="about-info">
+            <li><strong>Email:</strong> rraj95155@gmail.com</li>
+            <li><strong>Location:</strong> [Your Location]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">
+          <span>Azure DevOps</span>
+          <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+        </div>
+        <div class="skill">
+          <span>CI/CD</span>
+          <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Cloud Solutions</span>
+          <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Automation</span>
+          <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+    <section id="education" class="education-section">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>[Your Degree]</h3>
+            <p>[Your College/University]</p>
+            <span class="timeline-date">[Year]</span>
+          </div>
+        </div>
+        <!-- Add more education items as needed -->
+      </div>
+    </section>
+    <section id="experience" class="experience-section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Azure DevOps Engineer</h3>
+            <p>[Company Name]</p>
+            <span class="timeline-date">[Year - Present]</span>
+            <ul>
+              <li>Implemented CI/CD pipelines for multiple projects</li>
+              <li>Automated infrastructure provisioning</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add more experience items as needed -->
+      </div>
     </section>
     <section id="projects" class="projects-section">
       <h2>Projects</h2>
-      <div id="projects-list">
+      <div id="projects-list" class="projects-list">
         <!-- Projects will be loaded here by JS -->
       </div>
     </section>
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
       <p>Email: <a href="mailto:rraj95155@gmail.com">rraj95155@gmail.com</a></p>
     </section>
+    <footer>
+      <div class="footer-links">
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#skills">Skills</a> |
+        <a href="#education">Education</a> |
+        <a href="#experience">Experience</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+      </div>
+      <p>&copy; 2024 Ramaraju D V. All rights reserved.</p>
+    </footer>
   </main>
-  <footer>
-    <p>&copy; 2024 Ramaraju D V. All rights reserved.</p>
-  </footer>
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html> 

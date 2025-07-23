@@ -1,4 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
+  // Smooth scroll for nav links
+  $('.sidebar-nav a, .footer-links a').on('click', function(e) {
+    if (this.hash !== '') {
+      e.preventDefault();
+      const hash = this.hash;
+      $('html, body').animate({ scrollTop: $(hash).offset().top - 30 }, 700);
+      $('.sidebar-nav a').removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+
+  // Highlight nav on scroll
+  $(window).on('scroll', function() {
+    const scrollPos = $(document).scrollTop();
+    $('.sidebar-nav a').each(function() {
+      const currLink = $(this);
+      const refElement = $(currLink.attr('href'));
+      if (refElement.position().top - 60 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.sidebar-nav a').removeClass('active');
+        currLink.addClass('active');
+      }
+    });
+  });
+
+  // Animate skills progress bars
+  function animateSkills() {
+    $('.progress').each(function() {
+      const width = $(this).attr('style').match(/width: (\d+)%/)[1];
+      $(this).css('width', '0');
+      $(this).animate({ width: width + '%' }, 1200);
+    });
+  }
+  let skillsAnimated = false;
+  $(window).on('scroll', function() {
+    const skillsSection = $('#skills').offset().top - $(window).height() + 100;
+    if (!skillsAnimated && $(window).scrollTop() > skillsSection) {
+      animateSkills();
+      skillsAnimated = true;
+    }
+  });
+
+  // Typewriter effect for hero
+  function typeWriterEffect(element, text, speed) {
+    let i = 0;
+    function typing() {
+      if (i < text.length) {
+        element.text(text.substring(0, i+1));
+        i++;
+        setTimeout(typing, speed);
+      }
+    }
+    typing();
+  }
+  typeWriterEffect($('.typewriter'), 'Azure DevOps Engineer', 80);
+
+  // Fetch GitHub projects
   const projectsList = document.getElementById('projects-list');
   fetch('https://api.github.com/users/Ramaraju-devops/repos?sort=updated')
     .then(response => response.json())
@@ -17,4 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => {
       projectsList.innerHTML = '<p>Unable to load projects at this time.</p>';
     });
+
+  // Contact form (static, no backend)
+  $('.contact-form').on('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for reaching out! (Form is static)');
+    this.reset();
+  });
 }); 
