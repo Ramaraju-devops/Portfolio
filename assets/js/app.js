@@ -1,23 +1,23 @@
 $(document).ready(function() {
   // Smooth scroll for nav links
-  $('.sidebar-nav a, .footer-links a').on('click', function(e) {
+  $('.nav-links a, .footer-links a').on('click', function(e) {
     if (this.hash !== '') {
       e.preventDefault();
       const hash = this.hash;
-      $('html, body').animate({ scrollTop: $(hash).offset().top - 30 }, 700);
-      $('.sidebar-nav a').removeClass('active');
+      $('html, body').animate({ scrollTop: $(hash).offset().top - 60 }, 700);
+      $('.nav-links a').removeClass('active');
       $(this).addClass('active');
     }
   });
 
-  // Highlight nav on scroll
+  // Scrollspy for nav
   $(window).on('scroll', function() {
     const scrollPos = $(document).scrollTop();
-    $('.sidebar-nav a').each(function() {
+    $('.nav-links a').each(function() {
       const currLink = $(this);
       const refElement = $(currLink.attr('href'));
-      if (refElement.position().top - 60 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-        $('.sidebar-nav a').removeClass('active');
+      if (refElement.position().top - 80 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.nav-links a').removeClass('active');
         currLink.addClass('active');
       }
     });

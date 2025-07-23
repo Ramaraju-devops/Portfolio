@@ -8,11 +8,11 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="sidebar-logo">Ramaraju D V</div>
-    <nav class="sidebar-nav">
-      <ul>
-        <li><a href="#home">Home</a></li>
+  <header class="topnav">
+    <div class="nav-logo">Ramaraju D V</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
@@ -21,33 +21,28 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </aside>
-  <main class="main-content">
-    <section id="home" class="hero-section">
+  </header>
+  <main class="snap-container">
+    <section id="home" class="snap-section hero-section">
       <div class="hero-content">
+        <img src="assets/images/Photo-ramaraju.png" alt="Photo of Ramaraju D V" class="hero-photo">
         <h1>Hi, I'm <span class="highlight">Ramaraju D V</span></h1>
         <h2 class="typewriter">Azure DevOps Engineer</h2>
-        <p>Welcome to my portfolio website!</p>
         <div class="social-links">
           <a href="https://github.com/Ramaraju-devops" target="_blank">GitHub</a>
           <a href="https://www.linkedin.com/in/linkedIn-Rama" target="_blank">LinkedIn</a>
         </div>
       </div>
     </section>
-    <section id="about" class="about-section">
+    <section id="about" class="snap-section about-section">
       <h2>About Me</h2>
-      <div class="about-content">
-        <img src="assets/images/Photo-ramaraju.png" alt="Photo of Ramaraju D V" class="profile-photo-img">
-        <div>
-          <p>Azure DevOps Engineer passionate about automation, CI/CD, and cloud solutions. Experienced in building and maintaining robust DevOps pipelines and infrastructure.</p>
-          <ul class="about-info">
-            <li><strong>Email:</strong> rraj95155@gmail.com</li>
-            <li><strong>Location:</strong> [Your Location]</li>
-          </ul>
-        </div>
-      </div>
+      <p>Azure DevOps Engineer passionate about automation, CI/CD, and cloud solutions. Experienced in building and maintaining robust DevOps pipelines and infrastructure.</p>
+      <ul class="about-info">
+        <li><strong>Email:</strong> rraj95155@gmail.com</li>
+        <li><strong>Location:</strong> [Your Location]</li>
+      </ul>
     </section>
-    <section id="skills" class="skills-section">
+    <section id="skills" class="snap-section skills-section">
       <h2>Skills</h2>
       <div class="skills-list">
         <div class="skill">
@@ -69,7 +64,7 @@
         <!-- Add more skills as needed -->
       </div>
     </section>
-    <section id="education" class="education-section">
+    <section id="education" class="snap-section education-section">
       <h2>Education</h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -83,7 +78,7 @@
         <!-- Add more education items as needed -->
       </div>
     </section>
-    <section id="experience" class="experience-section">
+    <section id="experience" class="snap-section experience-section">
       <h2>Experience</h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -101,13 +96,13 @@
         <!-- Add more experience items as needed -->
       </div>
     </section>
-    <section id="projects" class="projects-section">
+    <section id="projects" class="snap-section projects-section">
       <h2>Projects</h2>
       <div id="projects-list" class="projects-list">
         <!-- Projects will be loaded here by JS -->
       </div>
     </section>
-    <section id="contact" class="contact-section">
+    <section id="contact" class="snap-section contact-section">
       <h2>Contact</h2>
       <form class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required>
@@ -117,19 +112,19 @@
       </form>
       <p>Email: <a href="mailto:rraj95155@gmail.com">rraj95155@gmail.com</a></p>
     </section>
-    <footer>
-      <div class="footer-links">
-        <a href="#home">Home</a> |
-        <a href="#about">About</a> |
-        <a href="#skills">Skills</a> |
-        <a href="#education">Education</a> |
-        <a href="#experience">Experience</a> |
-        <a href="#projects">Projects</a> |
-        <a href="#contact">Contact</a>
-      </div>
-      <p>&copy; 2024 Ramaraju D V. All rights reserved.</p>
-    </footer>
   </main>
+  <footer>
+    <div class="footer-links">
+      <a href="#home">Home</a> |
+      <a href="#about">About</a> |
+      <a href="#skills">Skills</a> |
+      <a href="#education">Education</a> |
+      <a href="#experience">Experience</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; 2024 Ramaraju D V. All rights reserved.</p>
+  </footer>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
