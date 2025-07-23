@@ -420,6 +420,10 @@ section {
 }
 
 /* Projects Section */
+.projects {
+    background: #f8f9fa;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -442,6 +446,41 @@ section {
 .project-img {
     position: relative;
     overflow: hidden;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-img-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.project-img-1::before {
+    content: "Azure DevOps";
+    text-align: center;
+}
+
+.project-img-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.project-img-2::before {
+    content: "Azure Automation";
+    text-align: center;
+}
+
+.project-img-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.project-img-3::before {
+    content: "Azure Cloud";
+    text-align: center;
 }
 
 .project-img img {
