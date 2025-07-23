@@ -288,49 +288,145 @@ section {
 }
 
 /* Skills Section */
-.skills-content {
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.skill-item {
+.skill-category {
     background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #4A90E2;
 }
 
-.skill-info {
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category-header {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f8f9fa;
 }
 
-.skill-info h4 {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.skill-info span {
+.skill-category-header i {
+    font-size: 2rem;
     color: #4A90E2;
+    margin-right: 1rem;
+    width: 40px;
+    text-align: center;
+}
+
+.skill-category-header h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
     font-weight: 600;
 }
 
-.skill-bar {
-    background: #e9ecef;
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
 }
 
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, #4A90E2, #357ABD);
-    border-radius: 4px;
-    width: 0;
-    transition: width 2s ease;
+.skill-tag {
+    background: #2c3e50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: default;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.4);
+    background: #34495e;
+}
+
+/* Category 1: Azure DevOps & CI/CD - Dark Blue */
+.skill-category:nth-child(1) .skill-tag {
+    background: #1e3a8a;
+    color: white;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+}
+
+.skill-category:nth-child(1) .skill-tag:hover {
+    background: #1e40af;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
+}
+
+/* Category 2: Infrastructure as Code - Dark Purple */
+.skill-category:nth-child(2) .skill-tag {
+    background: #6b21a8;
+    color: white;
+    box-shadow: 0 2px 8px rgba(107, 33, 168, 0.3);
+}
+
+.skill-category:nth-child(2) .skill-tag:hover {
+    background: #7c3aed;
+    box-shadow: 0 4px 12px rgba(107, 33, 168, 0.4);
+}
+
+/* Category 3: Azure Cloud Services - Dark Teal */
+.skill-category:nth-child(3) .skill-tag {
+    background: #0f766e;
+    color: white;
+    box-shadow: 0 2px 8px rgba(15, 118, 110, 0.3);
+}
+
+.skill-category:nth-child(3) .skill-tag:hover {
+    background: #14b8a6;
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.4);
+}
+
+/* Category 4: AI & Modern Tech - Dark Orange */
+.skill-category:nth-child(4) .skill-tag {
+    background: #c2410c;
+    color: white;
+    box-shadow: 0 2px 8px rgba(194, 65, 12, 0.3);
+}
+
+.skill-category:nth-child(4) .skill-tag:hover {
+    background: #ea580c;
+    box-shadow: 0 4px 12px rgba(194, 65, 12, 0.4);
+}
+
+/* Category 5: Project Management - Dark Green */
+.skill-category:nth-child(5) .skill-tag {
+    background: #166534;
+    color: white;
+    box-shadow: 0 2px 8px rgba(22, 101, 52, 0.3);
+}
+
+.skill-category:nth-child(5) .skill-tag:hover {
+    background: #16a34a;
+    box-shadow: 0 4px 12px rgba(22, 101, 52, 0.4);
+}
+
+/* Category 6: Systems & Databases - Dark Red */
+.skill-category:nth-child(6) .skill-tag {
+    background: #991b1b;
+    color: white;
+    box-shadow: 0 2px 8px rgba(153, 27, 27, 0.3);
+}
+
+.skill-category:nth-child(6) .skill-tag:hover {
+    background: #dc2626;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.4);
 }
 
 /* Education & Experience Timeline */
