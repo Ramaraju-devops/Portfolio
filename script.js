@@ -54,7 +54,7 @@ $(document).ready(function() {
         if (target.length) {
             $('html, body').animate({
                 scrollTop: target.offset().top - 70
-            }, 1000);
+            }, 500);  // Reduced from 1000ms to 500ms for faster navigation
         }
     });
 
@@ -93,7 +93,7 @@ $(document).ready(function() {
     });
 
     $('.back-to-top').click(function() {
-        $('html, body').animate({scrollTop: 0}, 1000);
+        $('html, body').animate({scrollTop: 0}, 500);  // Reduced from 1000ms to 500ms for faster navigation
     });
 
     // Skill Bar Animation
@@ -194,7 +194,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         const scrolled = $(window).scrollTop();
         const parallax = $('.home');
-        const speed = scrolled * 0.5;
+        const speed = scrolled * 0.2;
         
         parallax.css('background-position', 'center ' + speed + 'px');
     });
