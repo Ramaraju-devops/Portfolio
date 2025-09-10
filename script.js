@@ -327,6 +327,64 @@ $(document).ready(function() {
     // Initialize tooltips (if using Bootstrap or custom tooltips)
     $('[data-toggle="tooltip"]').tooltip();
 
+    // Enhanced CV download functionality
+    $('.btn-outline[download]').click(function(e) {
+        const downloadButton = $(this);
+        const originalText = downloadButton.html();
+        
+        // Change button text to show progress
+        downloadButton.html('<i class="fas fa-spinner fa-spin"></i> Downloading...');
+        
+        // Create a loading animation
+        setTimeout(() => {
+            downloadButton.html(originalText);
+            
+            // Show success message
+            const successMessage = $('<div class="download-message">✓ Download started!</div>');
+            successMessage.insertAfter(downloadButton);
+            
+            // Remove message after 3 seconds
+            setTimeout(() => {
+                successMessage.fadeOut(() => successMessage.remove());
+            }, 3000);
+        }, 1000);
+    });
+
+    // Add CSS for download message
+    const downloadMessageCSS = `
+        .download-message {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            animation: fadeInUp 0.3s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 10px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+    `;
+    
+    // Inject download message CSS
+    if (!document.getElementById('download-message-styles')) {
+        const style = document.createElement('style');
+        style.id = 'download-message-styles';
+        style.textContent = downloadMessageCSS;
+        document.head.appendChild(style);
+    }
+
     // Keyboard navigation support
     $(document).keydown(function(e) {
         // ESC key closes mobile menu

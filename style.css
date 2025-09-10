@@ -53,6 +53,7 @@ body {
     font-weight: 700;
     color: #4A90E2;
     text-decoration: none;
+    margin-left: -20px;
 }
 
 .nav-menu {
@@ -109,7 +110,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #dda834 0%, #764ba2 100%);
     color: white;
     padding: 70px 20px 0;  /* Added top padding of 80px */
 }
@@ -199,21 +200,71 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
 }
 
 .btn-outline:hover {
     background: #4A90E2;
     color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+}
+
+.btn-outline:hover::before {
+    left: 100%;
 }
 
 .btn-outline i {
-    font-size: 0.9em;
+    font-size: 1.1em;
+    margin-right: 0.3rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-outline:hover i {
+    transform: translateY(-2px);
 }
 
 .about-actions {
     display: flex;
-    margin-top: 1.2rem;
-    gap: 0.8rem;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    position: relative;
+}
+
+.about-actions .btn-outline {
+    position: relative;
+}
+
+.about-actions .btn-outline[download] {
+    background: linear-gradient(45deg, rgba(74, 144, 226, 0.1), rgba(74, 144, 226, 0));
+    border: 2px solid #4A90E2;
+    transition: all 0.3s ease;
+}
+
+.about-actions .btn-outline[download]:hover {
+    background: #4A90E2;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+.about-actions .btn-outline[download] i {
+    transition: all 0.3s ease;
+}
+
+.about-actions .btn-outline[download]:hover i {
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -240,6 +291,11 @@ body {
     
     .about-actions {
         justify-content: center;
+    }
+    
+    .download-message {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -450,7 +506,6 @@ section {
 .skill-tag:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(44, 62, 80, 0.4);
-    background: #34495e;
 }
 
 /* Category 1: Azure DevOps & CI/CD - Dark Blue */
@@ -707,6 +762,21 @@ section {
 .project-img-5::before {
     content: "Infrastructure";
     text-align: center;
+}
+
+.project-img-6 {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+}
+
+.project-img-6::before {
+    content: "Self-Learning";
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    width: 100%;
+    display: block;
 }
 
 .project-img img {
